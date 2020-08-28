@@ -10,7 +10,11 @@
 </template>
 
 <script>
+  import Icon from './icon.vue'
   export default {
+    components:{
+      'g-button': Icon
+    },
     props: {
       icon: {},
       loading: {
