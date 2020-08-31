@@ -69,11 +69,9 @@ describe('Button', () => {
         icon: 'settings',
       }
     }).$mount()
-
     const callback = sinon.fake();
     vm.$on('click', callback)
     vm.$el.click()
     expect(callback).to.have.been.called
-
   })
 })
