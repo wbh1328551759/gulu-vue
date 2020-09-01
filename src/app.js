@@ -35,12 +35,10 @@ new Vue({
     loading3: false,
     message: 'hi'
   },
-  methods: {
-    showToast(){
-      this.$toast('我是 message')
-    }
-  },
-  created(){
-
+  methods: {},
+  created() {
+    this.$toast('<strong>你好我是猪</strong>', {
+      enableHtml: false
+    })
   }
 })
