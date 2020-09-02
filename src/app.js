@@ -35,16 +35,20 @@ new Vue({
     loading3: false,
     message: 'hi'
   },
-  methods: {},
+  methods: {
+    showToast(){
+      this.$toast('<strong>你好我是猪</strong>', {
+        enableHtml: false,
+        position: 'middle',
+        claseButton:{
+          text: '已充值',
+        },
+        autoClose: false,
+        autoCloseDelay: 3
+      })
+    }
+  },
   created() {
-    this.$toast('<strong>你好我是猪</strong>', {
-      enableHtml: false,
-      position: 'middle',
-      claseButton:{
-        text: '已充值',
-      },
-      autoClose: false,
-      autoCloseDelay: 3
-    })
+
   }
 })
