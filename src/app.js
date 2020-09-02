@@ -36,10 +36,19 @@ new Vue({
     message: 'hi'
   },
   methods: {
-    showToast(){
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position){
       this.$toast('<strong>你好我是猪</strong>', {
         enableHtml: false,
-        position: 'middle',
+        position,
         claseButton:{
           text: '已充值',
         },
