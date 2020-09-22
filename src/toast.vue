@@ -20,12 +20,11 @@
     name: 'GuluToast',
     props: {
       autoClose: {
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 5
+        type: [Boolean, Number],
+        default: 5,
+        validator(value) {
+          return value === false || typeof value === 'number';
+        }
       },
       closeButton: {
         type: Object,
@@ -68,12 +67,12 @@
           setTimeout(() => {
               this.close()
             },
-            this.autoCloseDelay * 1000)
+            this.autoClose * 1000)
         }
       },
       close() {
         this.$el.remove()
-        this.$emit('before')
+        this.$emit('close')
         this.$destroy()
       },
       onClickClose() {
@@ -101,6 +100,7 @@
       transform: translateY(0%)
     }
   }
+
   @keyframes slide-down {
     0% {
       opacity: 0;
@@ -111,6 +111,7 @@
       transform: translateY(0%)
     }
   }
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -119,34 +120,42 @@
       opacity: 1;
     }
   }
-  .wrapper{
+
+  .wrapper {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+
     &.position-top {
       top: 0;
-      .toast{
+
+      .toast {
         animation: slide-down $animation-duration;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
     }
+
     &.position-bottom {
       bottom: 0;
-      .toast{
+
+      .toast {
         animation: slide-up $animation-duration;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
     }
+
     &.position-middle {
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
-      .toast{
+
+      .toast {
         animation: fade-in $animation-duration;
       }
     }
   }
+
   .toast {
     color: white;
     font-size: $font-size;
