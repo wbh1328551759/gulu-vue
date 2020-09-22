@@ -3,7 +3,6 @@
     <slot></slot>
   </div>
 </template>
-
 <script>
 import Vue from "vue";
 export default {
@@ -12,14 +11,14 @@ export default {
     selected: {
       type: String,
       required: true
+    },
+    direction: {
+      type: String,
+      default: "horizontal",
+      validator(value) {
+        return ["horizontal", "vertical"].indexOf(value) >= 0;
+      }
     }
-    // direction: {
-    //   type: String,
-    //   default: "horizontal",
-    //   validator(value) {
-    //     return ["horizontal", "vertical"].indexOf >= 0;
-    //   }
-    // }
   },
   data() {
     return {
@@ -30,9 +29,6 @@ export default {
     return {
       eventBus: this.eventBus
     };
-  },
-  created() {
-    // console.log(this);
   },
   mounted() {
     if (this.$children.length === 0) {
@@ -55,7 +51,6 @@ export default {
   }
 };
 </script>
-
 <style>
 .tabs {
 }

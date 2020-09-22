@@ -33,6 +33,7 @@ describe("TabsItem", () => {
     const Constructor = Vue.extend(TabsItem);
     const vm = new Constructor({
       propsData: {
+        name: "xxx",
         disabled: true,
       },
     }).$mount();
