@@ -25,7 +25,8 @@ export default {
   computed: {
     classes() {
       return {
-        active: this.active
+        active: this.active,
+        disabled: this.disabled
       };
     }
   },
@@ -33,35 +34,41 @@ export default {
   created() {
     this.eventBus.$on("update:selected", name => {
       if (name === this.name) {
-        console.log(`pane ${this.name}被选中了`);
         this.active = true;
       } else {
-        console.log(`pane ${this.name}没被选中`);
         this.active = false;
       }
     });
   },
-  mounted() {
-    console.log(this.name);
-  },
+  mounted() {},
   methods: {
     onClick() {
-      this.eventBus.$emit("update:selected", this.name);
+      if (this.disabled) {
+        return;
+      }
+      this.eventBus.$emit("update:selected", this.name, this);
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+$blue: blue;
+$disabled-text-color: grey;
 .tabs-item {
   flex-shrink: 0;
   padding: 0 1em;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
   &.active {
-    background: red;
+    color: $blue;
   }
   &.disabled {
     cursor: not-allowed;
+    color: $disabled-text-color;
   }
 }
 </style>
