@@ -1,27 +1,42 @@
 <template>
   <div class="tabs">
     <slot></slot>
-    <slot name="action"></slot>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
 export default {
   name: "GuluTabs",
   props: {
     selected: {
       type: String,
       required: true
-    },
-    direction: {
-      type: String,
-      default: "horizontal",
-      validator(value) {
-        return ["horizontal", "vertical"].indexOf >= 0;
-      }
     }
+    // direction: {
+    //   type: String,
+    //   default: "horizontal",
+    //   validator(value) {
+    //     return ["horizontal", "vertical"].indexOf >= 0;
+    //   }
+    // }
   },
-  created() {}
+  data() {
+    return {
+      eventBus: new Vue()
+    };
+  },
+  provide() {
+    return {
+      eventBus: this.eventBus
+    };
+  },
+  created() {
+    // console.log(this);
+  },
+  mounted() {
+    this.eventBus.$emit("update:selected", this.selected);
+  }
 };
 </script>
 
