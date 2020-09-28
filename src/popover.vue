@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="onClick" ref="popover">
+  <div class="popover" ref="popover">
     <div
       ref="contentWrapper"
       class="content-wrapper"
@@ -22,6 +22,41 @@ export default {
       visible: false
     };
   },
+
+  mounted() {
+    if (this.trigger === "click") {
+      this.$refs.popover.addEventListener("click", this.onClick);
+    } else {
+      this.$refs.popover.addEventListener("mouseenter", this.open);
+      this.$refs.popover.addEventListener("mouseleave", this.close);
+    }
+  },
+  destroyed() {
+    if (this.trigger === "click") {
+      this.$refs.popover.removeEventListener("click", this.onClick);
+    } else {
+      this.$refs.popover.removeEventListener("mouseenter", this.open);
+      this.$refs.popover.removeEventListener("mouseleave", this.close);
+    }
+  },
+  computed: {
+    openEvent() {
+      if (this.trigger === "click") {
+        console.log(this.trigger);
+        return "click";
+      } else {
+        console.log(this.trigger);
+        return "mouseenter";
+      }
+    },
+    closeEvent() {
+      if (this.trigger === "click") {
+        return "click";
+      } else {
+        return "mouseleave";
+      }
+    }
+  },
   props: {
     position: {
       type: String,
@@ -29,30 +64,46 @@ export default {
       validator(value) {
         return ["top", "bottom", "left", "right"].indexOf(value) >= 0;
       }
+    },
+    trigger: {
+      type: String,
+      default: "click",
+      validator(value) {
+        return ["click", "hover"].indexOf(value) >= 0;
+      }
     }
   },
   methods: {
     positionContent() {
       const { contentWrapper, triggerWrapper } = this.$refs;
       document.body.appendChild(contentWrapper);
-      let { width, height, top, left } = triggerWrapper.getBoundingClientRect();
-      if (this.position === "top") {
-        contentWrapper.style.left = left + window.scrollX + "px";
-        contentWrapper.style.top = top + window.scrollY + "px";
-      } else if (this.position === "bottom") {
-        contentWrapper.style.left = left + window.scrollX + "px";
-        contentWrapper.style.top = top + height + window.scrollY + "px";
-      } else if (this.position === "left") {
-        contentWrapper.style.left = left + window.scrollX + "px";
-        let { height: height2 } = contentWrapper.getBoundingClientRect();
-        contentWrapper.style.top =
-          top + window.scrollY + (height - height2) / 2 + "px";
-      } else if (this.position === "right") {
-        contentWrapper.style.left = left + width + window.scrollX + "px";
-        let { height: height2 } = contentWrapper.getBoundingClientRect();
-        contentWrapper.style.top =
-          top + window.scrollY + (height - height2) / 2 + "px";
-      }
+      const {
+        width,
+        height,
+        top,
+        left
+      } = triggerWrapper.getBoundingClientRect();
+      const { height: height2 } = contentWrapper.getBoundingClientRect();
+      let positions = {
+        top: {
+          top: top + window.scrollY,
+          left: left + window.scrollX
+        },
+        bottom: {
+          top: top + height + window.scrollY,
+          left: left + window.scrollX
+        },
+        left: {
+          top: top + window.scrollY + (height - height2) / 2,
+          left: left + window.scrollX
+        },
+        right: {
+          top: top + window.scrollY + (height - height2) / 2,
+          left: left + width + window.scrollX
+        }
+      };
+      contentWrapper.style.top = positions[this.position].top + "px";
+      contentWrapper.style.left = positions[this.position].left + "px";
     },
     onClickDocument(e) {
       if (
@@ -89,8 +140,7 @@ export default {
         }
       }
     }
-  },
-  mounted() {}
+  }
 };
 </script>
 
