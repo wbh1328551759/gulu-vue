@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{475:function(e,t,n){"use strict";n.r(t);var i=n(43),r=Object(i.a)({},(function(){var e=this.$createElement;this._self._c;return this._m(0)}),[function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("pre",[t("code",[this._v("yarn add wbh-ui")])])])}],!1,null,null,null);t.default=r.exports}}]);

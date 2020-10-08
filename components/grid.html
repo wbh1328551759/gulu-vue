@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>网格 - Grid | 西瓜 UI</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="一个简单实用的 UI 框架">
+    <link rel="preload" href="/gulu-vue/assets/css/0.styles.c84252e7.css" as="style"><link rel="preload" href="/gulu-vue/assets/js/app.dec13eb9.js" as="script"><link rel="preload" href="/gulu-vue/assets/js/3.2b278995.js" as="script"><link rel="preload" href="/gulu-vue/assets/js/28.fba3b7b3.js" as="script"><link rel="preload" href="/gulu-vue/assets/js/7.3ad5b852.js" as="script"><link rel="preload" href="/gulu-vue/assets/js/8.9034d85d.js" as="script"><link rel="preload" href="/gulu-vue/assets/js/9.0e2437d7.js" as="script"><link rel="preload" href="/gulu-vue/assets/js/10.59b1f509.js" as="script"><link rel="prefetch" href="/gulu-vue/assets/js/1.9300f180.js"><link rel="prefetch" href="/gulu-vue/assets/js/11.8b1ff88a.js"><link rel="prefetch" href="/gulu-vue/assets/js/12.cceb37bf.js"><link rel="prefetch" href="/gulu-vue/assets/js/13.cf50dc82.js"><link rel="prefetch" href="/gulu-vue/assets/js/14.276d0cd3.js"><link rel="prefetch" href="/gulu-vue/assets/js/15.0f3d2ee8.js"><link rel="prefetch" href="/gulu-vue/assets/js/16.8eddefb3.js"><link rel="prefetch" href="/gulu-vue/assets/js/17.ad59cf21.js"><link rel="prefetch" href="/gulu-vue/assets/js/18.15c151d1.js"><link rel="prefetch" href="/gulu-vue/assets/js/19.d013b9f8.js"><link rel="prefetch" href="/gulu-vue/assets/js/20.0d01420c.js"><link rel="prefetch" href="/gulu-vue/assets/js/21.b11103ee.js"><link rel="prefetch" href="/gulu-vue/assets/js/22.35ee0565.js"><link rel="prefetch" href="/gulu-vue/assets/js/23.8c4c6764.js"><link rel="prefetch" href="/gulu-vue/assets/js/24.7b196635.js"><link rel="prefetch" href="/gulu-vue/assets/js/25.a628c9a2.js"><link rel="prefetch" href="/gulu-vue/assets/js/26.9a8cc430.js"><link rel="prefetch" href="/gulu-vue/assets/js/27.c404d8d2.js"><link rel="prefetch" href="/gulu-vue/assets/js/29.b461a605.js"><link rel="prefetch" href="/gulu-vue/assets/js/30.f7cb199d.js"><link rel="prefetch" href="/gulu-vue/assets/js/31.3dadee21.js"><link rel="prefetch" href="/gulu-vue/assets/js/32.88d248ad.js"><link rel="prefetch" href="/gulu-vue/assets/js/33.32f52e9c.js"><link rel="prefetch" href="/gulu-vue/assets/js/34.0fdf48c1.js"><link rel="prefetch" href="/gulu-vue/assets/js/35.89f3b3b0.js"><link rel="prefetch" href="/gulu-vue/assets/js/36.ce21bce2.js"><link rel="prefetch" href="/gulu-vue/assets/js/4.35851ef3.js"><link rel="prefetch" href="/gulu-vue/assets/js/5.1e7ca96e.js"><link rel="prefetch" href="/gulu-vue/assets/js/6.5ec5eb22.js">
+    <link rel="stylesheet" href="/gulu-vue/assets/css/0.styles.c84252e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/gulu-vue/" class="home-link router-link-active"><!----> <span class="site-name">西瓜 UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/gulu-vue/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/gulu-vue/install/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="https://github.com/wbh1328551759/gulu-vue/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/gulu-vue/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/gulu-vue/install/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><a href="https://github.com/wbh1328551759/gulu-vue/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>入门</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>组件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/gulu-vue/components/button.html" class="sidebar-link">按钮 - Button</a></li><li><a href="/gulu-vue/components/grid.html" aria-current="page" class="active sidebar-link">网格 - Grid</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/gulu-vue/components/input.html" class="sidebar-link">输入框 - Input</a></li><li><a href="/gulu-vue/components/layout.html" class="sidebar-link">布局 - Layout</a></li><li><a href="/gulu-vue/components/popover.html" class="sidebar-link">弹出层 - Popover</a></li><li><a href="/gulu-vue/components/tabs.html" class="sidebar-link">标签 - Tabs</a></li><li><a href="/gulu-vue/components/toast.html" class="sidebar-link">弹出提示 - Toast</a></li><li><a href="/gulu-vue/components/collapse.html" class="sidebar-link">折叠面板 - Collapse</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="网格-grid"><a href="#网格-grid" class="header-anchor">#</a> 网格 - Grid</h1> <h3 id="预览及使用方法"><a href="#预览及使用方法" class="header-anchor">#</a> 预览及使用方法</h3> <div class="grid-wrapper content" data-v-3920255c><div class="row row" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-3920255c><div class="col item col-24" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-24</div></div> <div class="row" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-3920255c><div class="col item col-12" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-12</div> <div class="col item col-12" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-12</div></div> <div class="row row" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-3920255c><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-8</div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-8</div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-8</div></div> <div class="row row" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-3920255c><div class="col item col-6" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-6</div> <div class="col item col-6" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-6</div> <div class="col item col-6" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-6</div> <div class="col item col-6" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-3920255c>col-6</div></div> <pre data-v-3920255c><code data-v-3920255c>&lt;template&gt;
+  &lt;div class=&quot;grid-wrapper content&quot;&gt;
+    &lt;g-row class=&quot;row&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;24&quot;&gt;col-24&lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;12&quot;&gt;col-12&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;12&quot;&gt;col-12&lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row class=&quot;row&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;col-8&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;col-8&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;col-8&lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row class=&quot;row&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;6&quot;&gt;col-6&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;6&quot;&gt;col-6&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;6&quot;&gt;col-6&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;6&quot;&gt;col-6&lt;/g-col&gt;
+    &lt;/g-row&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;style lang=&quot;scss&quot; scoped&gt;
+* {
+  box-sizing: border-box;
+}
+.grid-wrapper {
+  $background: #3eaf7c;
+  &gt; .row {
+    padding: 0.2em;
+    &gt; .item {
+      text-align: center;
+      color: white;
+      padding: 0.2em;
+      &amp;:nth-child(odd) {
+        background: $background;
+      }
+      &amp;:nth-child(even) {
+        background: lighten($background, 20%);
+        color: black;
+      }
+    }
+  }
+}
+&lt;/style&gt;</code></pre></div> <h3 id="相关提示"><a href="#相关提示" class="header-anchor">#</a> 相关提示：</h3> <h3 id="row-选项"><a href="#row-选项" class="header-anchor">#</a> Row 选项</h3> <h4 id="_1、gutter"><a href="#_1、gutter" class="header-anchor">#</a> 1、gutter</h4> <p>通过给 <code>Row</code> 设置 <code>gutter</code> 属性, 可以让栅格有间隔，单位为 <code>px</code> 。</p> <div class="gutter-wrapper" data-v-b85b6e80><div class="row" style="margin-left:-15px;margin-right:-15px;" data-v-455dcdac data-v-b85b6e80><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-30;</span></div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-30;</span></div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-30;</span></div></div> <div class="row" style="margin-left:-10px;margin-right:-10px;" data-v-455dcdac data-v-b85b6e80><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-20;</span></div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-20;</span></div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-20;</span></div></div> <div class="row" style="margin-left:-5px;margin-right:-5px;" data-v-455dcdac data-v-b85b6e80><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-10;</span></div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-10;</span></div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-b85b6e80><span data-v-4ffb5a20 data-v-b85b6e80>col-8; gutter-10;</span></div></div> <pre data-v-b85b6e80><code data-v-b85b6e80>&lt;template&gt;
+  &lt;div class=&quot;gutter-wrapper&quot;&gt;
+    &lt;g-row gutter=&quot;30&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-30;&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-30;&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-30;&lt;/span&gt;
+      &lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row gutter=&quot;20&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-20;&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-20;&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-20;&lt;/span&gt;
+      &lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row gutter=&quot;10&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-10;&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-10;&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8; gutter-10;&lt;/span&gt;
+      &lt;/g-col&gt;
+    &lt;/g-row&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;style lang=&quot;scss&quot; scoped&gt;
+  * { box-sizing: border-box; }
+  .gutter-wrapper { padding-top: 10px;
+    .item { text-align: center; color: white;
+      &gt; span { display: block; background: #3eaf7c; }
+    }
+  }
+&lt;/style&gt;</code></pre></div> <h4 id="_2、align"><a href="#_2、align" class="header-anchor">#</a> 2、align</h4> <p>通过给 <code>Row</code> 设置 <code>align</code> 属性, 可以定义其子组件在该节点里面的排版方式。</p> <div class="align-wrapper content" data-v-564e781b><div class="row row align-left" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-564e781b><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-564e781b>left</div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-564e781b>left</div></div> <div class="row row align-center" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-564e781b><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-564e781b>center</div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-564e781b>center</div></div> <div class="row row align-right" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-564e781b><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-564e781b>right</div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-564e781b>right</div></div> <div class="code" data-v-564e781b><pre data-v-564e781b><code data-v-564e781b>&lt;template&gt;
+  &lt;div class=&quot;align-wrapper content&quot;&gt;
+    &lt;g-row class=&quot;row&quot; align=&quot;left&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;left&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;left&lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row class=&quot;row&quot; align=&quot;center&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;center&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;center&lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row class=&quot;row&quot; align=&quot;right&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;right&lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;right&lt;/g-col&gt;
+    &lt;/g-row&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;style lang=&quot;scss&quot; scoped&gt;
+$background: #3eaf7c;
+* {
+  box-sizing: border-box;
+}
+.align-wrapper {
+  text-align: center;
+  color: white;
+  .row {
+    padding-top: 10px;
+    &gt; .item {
+      text-align: center;
+      color: white;
+      &amp;:nth-child(odd) {
+        background: $background;
+      }
+      &amp;:nth-child(even) {
+        background: lighten($background, 20%);
+        color: black;
+      }
+    }
+  }
+}
+&lt;/style&gt;</code></pre></div></div> <h3 id="col-选项"><a href="#col-选项" class="header-anchor">#</a> Col 选项</h3> <h4 id="_1、span"><a href="#_1、span" class="header-anchor">#</a> 1、span</h4> <p>栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。通过设置 span 属性来实现。</p> <h4 id="_2、offset"><a href="#_2、offset" class="header-anchor">#</a> 2、offset</h4> <p>使用 offset 属性,可以将列向右侧偏。
+例如，offset=&quot;4&quot; 将元素向右侧偏移了 4 个列（column）的宽度。</p> <div class="offset-wrapper" data-v-7d16e8a8><div class="row row" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-7d16e8a8><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-8</span></div> <div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-8</span></div> <div class="col item col-4 offset-4" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-4</span></div></div> <div class="row row" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-7d16e8a8><div class="col item col-8" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-8</span></div> <div class="col item col-5 offset-3" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-5</span></div> <div class="col item col-4 offset-4" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-4</span></div></div> <div class="row row" style="margin-left:NaNpx;margin-right:NaNpx;" data-v-455dcdac data-v-7d16e8a8><div class="col item col-2 offset-6" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-2</span></div> <div class="col item col-5 offset-3" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-5</span></div> <div class="col item col-4 offset-4" style="padding-left:0px;padding-right:0px;" data-v-4ffb5a20 data-v-7d16e8a8><span data-v-4ffb5a20 data-v-7d16e8a8>col-4</span></div></div> <pre data-v-7d16e8a8><code data-v-7d16e8a8>&lt;template&gt;
+  &lt;div class=&quot;offset-wrapper&quot;&gt;
+    &lt;g-row class=&quot;row&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;4&quot; offset=&quot;4&quot;&gt;
+        &lt;span&gt;col-4&lt;/span&gt;
+      &lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row class=&quot;row&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;8&quot;&gt;
+        &lt;span&gt;col-8&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;5&quot; offset=&quot;3&quot;&gt;
+        &lt;span&gt;col-5&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;4&quot; offset=&quot;4&quot;&gt;
+        &lt;span&gt;col-4&lt;/span&gt;
+      &lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;g-row class=&quot;row&quot;&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;2&quot; offset=&quot;6&quot;&gt;
+        &lt;span&gt;col-2&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;5&quot; offset=&quot;3&quot;&gt;
+        &lt;span&gt;col-5&lt;/span&gt;
+      &lt;/g-col&gt;
+      &lt;g-col class=&quot;item&quot; span=&quot;4&quot; offset=&quot;4&quot;&gt;
+        &lt;span&gt;col-4&lt;/span&gt;
+      &lt;/g-col&gt;
+    &lt;/g-row&gt;
+    &lt;pre&gt;&lt;code&gt;{{content}}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;style lang=&quot;scss&quot; scoped&gt;
+$background: #3eaf7c;
+$wrapper-top: 10px;
+$font-color: white;
+* {
+  box-sizing: border-box;
+}
+.offset-wrapper {
+  padding-top: $wrapper-top;
+  &gt; .row {
+    &gt; .item {
+      text-align: center;
+      color: $font-color;
+      &gt; span {
+        display: block;
+        background: $background;
+      }
+    }
+  }
+}
+&lt;/style&gt;</code></pre></div> <h4 id="_3、响应式"><a href="#_3、响应式" class="header-anchor">#</a> 3、响应式</h4> <p>支持 ipad 、narrowPc 、pc 、widePc 四种设备的响应式设置，默认为手机端响应，<code>span</code> 值为 24。
+可以通过 <code>:ipad=&quot;{span:12, offset:12}&quot;</code> 的形式了来手动设定在具体设备情况下的 <code>offset</code> 和 <code>span</code> 属性</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/gulu-vue/components/button.html" class="prev">
+        按钮 - Button
+      </a></span> <span class="next"><a href="/gulu-vue/components/input.html">
+        输入框 - Input
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/gulu-vue/assets/js/app.dec13eb9.js" defer></script><script src="/gulu-vue/assets/js/3.2b278995.js" defer></script><script src="/gulu-vue/assets/js/28.fba3b7b3.js" defer></script><script src="/gulu-vue/assets/js/7.3ad5b852.js" defer></script><script src="/gulu-vue/assets/js/8.9034d85d.js" defer></script><script src="/gulu-vue/assets/js/9.0e2437d7.js" defer></script><script src="/gulu-vue/assets/js/10.59b1f509.js" defer></script>
+  </body>
+</html>
